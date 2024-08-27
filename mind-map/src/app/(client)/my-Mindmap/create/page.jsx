@@ -3,19 +3,14 @@ import { v4 as uuidv4 } from "uuid";
 import ToId from "./ToId";
 import { postMindMap } from "@/utils/mindMapFetch";
 
-export async function getServerSideProps(context) {
+export default async function CreatePage() {
     try {
-        const session = await getSession(context.req, context.res);
-        if (!session || !session.user) {
-            return {
-                redirect: {
-                    destination: "/api/auth/login",
-                    permanent: false,
-                },
-            };
+        const { user } = await getSession();
+        if (!user) {
+            throw new Error("User not authenticated");
         }
 
-        const userId = session.user.sub;
+        const userId = user.sub;
         const idMap = uuidv4();
         const title = "Mind Map chưa có tên";
         const description = "Chưa có mô tả";
@@ -38,29 +33,10 @@ export async function getServerSideProps(context) {
         // Gọi hàm post để lưu bản đồ mới
         await postMindMap([newMindMap], userId);
 
-        // Trả về idMap dưới dạng props để sử dụng trong trang
-        return {
-            props: {
-                idMap,
-            },
-        };
+        // Chuyển hướng đến trang của bản đồ mới
+        return <ToId id={idMap} />;
     } catch (error) {
         console.error("Error creating mind map:", error);
-        return {
-            props: {
-                error: "Error creating mind map. Please try again later.",
-            },
-        };
+        return <div>Error creating mind map. Please try again later.</div>;
     }
 }
-
-function CreatePage({ idMap, error }) {
-    if (error) {
-        return <div>{error}</div>;
-    }
-
-    // Chuyển hướng đến trang của bản đồ mới
-    return <ToId id={idMap} />;
-}
-
-export default CreatePage;
