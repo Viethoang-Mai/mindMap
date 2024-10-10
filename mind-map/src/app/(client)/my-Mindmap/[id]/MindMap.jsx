@@ -78,12 +78,12 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
                     body: JSON.stringify(data[userIndex]),
                 }
             );
-            revalidateTag("mindMapData");
 
             if (!res.ok) {
                 throw new Error(res.statusText);
             }
             toast.success("Lưu thành công");
+            revalidateTag("mindMapData");
             return await updateRes.json();
         } catch (err) {}
     }, [mapData, edges, nodes, title, description, mode, dataJson]);
