@@ -26,7 +26,6 @@ export default function DeleteButton({ id, userId }) {
                 throw new Error("User not found");
             }
 
-            // Xóa bản đồ tư duy khỏi mindMapData của người đó
             const updatedMindMapData = data[userIndex].mindMapData.filter(
                 (mindMap) => mindMap.idMap !== id
             );
@@ -48,7 +47,8 @@ export default function DeleteButton({ id, userId }) {
                 throw new Error("Failed to update user data");
             }
             toast.success("Xóa thành công");
-            revalidateTag("mindMapData");
+            router.refresh();
+            setLoading(false);
             return await updateRes.json();
         }
     };
