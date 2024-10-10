@@ -23,6 +23,7 @@ import { useRouter } from "next/navigation";
 import "@xyflow/react/dist/style.css";
 import TextUpdaterNode from "../CustomNode";
 import { toast } from "react-toastify";
+import { revalidateTag } from "next/cache";
 const initialEdges = [];
 const nodeTypes = { textUpdater: TextUpdaterNode };
 
@@ -77,7 +78,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
                     body: JSON.stringify(data[userIndex]),
                 }
             );
-            router.refresh();
+            revalidateTag("mindMapData");
 
             if (!res.ok) {
                 throw new Error(res.statusText);

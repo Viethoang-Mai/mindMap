@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { revalidateTag } from "next/cache";
 
 export default function DeleteButton({ id, userId }) {
     const [loading, setLoading] = useState(false);
@@ -47,7 +48,7 @@ export default function DeleteButton({ id, userId }) {
                 throw new Error("Failed to update user data");
             }
             toast.success("Xóa thành công");
-            router.refresh();
+            revalidateTag("mindMapData");
             return await updateRes.json();
         }
     };
