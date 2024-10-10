@@ -64,7 +64,7 @@ export default function Header() {
                         </p>
                     )}
 
-                    <Link
+                    <a
                         href={user ? "/my-Mindmap" : "/api/auth/login"}
                         className={clsx(
                             style["nav-action"],
@@ -72,9 +72,9 @@ export default function Header() {
                         )}
                     >
                         {user ? " Mind Map" : "Đăng nhập"}
-                    </Link>
+                    </a>
 
-                    <Link
+                    <a
                         href={user ? "/api/auth/logout" : "/api/auth/login"}
                         className={clsx(
                             style["nav-action"],
@@ -83,7 +83,7 @@ export default function Header() {
                         )}
                     >
                         {user ? "Đăng xuất" : "Đăng ký"}
-                    </Link>
+                    </a>
                 </nav>
             </div>
         </header>
