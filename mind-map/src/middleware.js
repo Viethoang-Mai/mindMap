@@ -30,7 +30,6 @@ export const middleware = async (req) => {
 
         const session = await getSession(req);
         const user = session?.user;
-        console.log(user, session);
 
         if (status === "private") {
             if (!user) {

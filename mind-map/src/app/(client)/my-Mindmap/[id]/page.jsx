@@ -1,4 +1,4 @@
-import { getSession } from "@auth0/nextjs-auth0";
+// import { getSession } from "@auth0/nextjs-auth0";
 import { findMindMap } from "@/utils/mindMapFetch";
 import { notFound } from "next/navigation";
 import MindMap from "./MindMap";
@@ -13,8 +13,8 @@ const getId = async (idMap) => {
 };
 export default async function MindMapPage({ params }) {
     const { id: idMap } = params;
-    const session = await getSession();
-    const user = session?.user || null;
+    // const session = await getSession();
+    // const user = session?.user || null;
     getId(idMap);
 
     const { mindMap, ownerId } = await findMindMap(idMap);
@@ -27,9 +27,9 @@ export default async function MindMapPage({ params }) {
     let dataJson = mindMap;
     let checkMode = "Edit";
 
-    if (ownerId !== user?.sub) {
-        checkMode = "NoneEdit";
-    }
+    // if (ownerId !== user?.sub) {
+    //     checkMode = "NoneEdit";
+    // }
 
     return (
         <MindMap

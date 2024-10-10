@@ -1,16 +1,16 @@
-import { getSession } from "@auth0/nextjs-auth0";
+// import { getSession } from "@auth0/nextjs-auth0";
 import { v4 as uuidv4 } from "uuid";
 import ToId from "./ToId";
 import { postMindMap } from "@/utils/mindMapFetch";
 
 export default async function CreatePage() {
     try {
-        const { user } = await getSession();
-        if (!user) {
-            throw new Error("User not authenticated");
-        }
+        // const { user } = await getSession();
+        // if (!user) {
+        //     throw new Error("User not authenticated");
+        // }
 
-        const userId = user.sub;
+        const userId = 123;
         const idMap = uuidv4();
         const title = "Mind Map chưa có tên";
         const description = "Chưa có mô tả";

@@ -1,6 +1,6 @@
 import Header from "@/components/Header/Header";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import { toast, ToastContainer } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 export const metadata = {
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
                     <Header />
                     <main>{children}</main>
                     <Footer />
-                    <ToastContainer autoClose={1000} />
+                    {/* <ToastContainer autoClose={1000} /> */}
                 </body>
             </UserProvider>
         </html>

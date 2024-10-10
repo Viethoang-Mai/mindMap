@@ -35,7 +35,6 @@ export const postMindMap = async (mindMap, userId) => {
         return await createRes.json();
     } else {
         user.mindMapData.push(...mindMap);
-        console.log(user.mindMapData);
 
         const updateRes = await fetch(
             `${process.env.NEXT_PUBLIC_URL_MINDMAP}/${userId}`,
