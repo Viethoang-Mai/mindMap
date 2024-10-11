@@ -25,11 +25,11 @@ export default function HomePage() {
                         alt="Mind map"
                     />
                 </div>
-                <div className="flex mt-20 ">
+                <div className="flex mt-20 max-sm:flex-col max-sm:gap-y-10 max-sm:items-center ">
                     {dataHomePage.map((item, index) => (
                         <div
                             key={index}
-                            className=" relative item basis-1/3 px-4   after:content-[''] after:block after:absolute after:w-[80px] after:h-[1px] after:left-1/2 after:-top-1/4 after:-translate-x-1/2  after:bg-[#4f46e535] "
+                            className=" relative item basis-1/3 px-3   after:content-[''] after:block after:absolute after:w-[80px] after:h-[1px] after:left-1/2 after:-top-1/4 after:-translate-x-1/2  after:bg-[#4f46e535] max-sm:w-8/12 max-sm:mx-auto "
                         >
                             <h3 className="text-xl font-medium  uppercase">
                                 {item.title}

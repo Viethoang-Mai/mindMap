@@ -28,7 +28,7 @@ export default function Header() {
 
     return (
         <header className="header py-5">
-            <div className=" w-full max-md:px-20 max-lg:px-5 px-10  h-20 mx-auto flex justify-between items-center">
+            <div className="w-full px-10 max-lg:px-5 max-md:px-20 h-20 mx-auto flex justify-between items-center">
                 <h1 className="font-semibold text-[#4f46e5] text-2xl">
                     <Link href="/">Mindmap Flow</Link>
                 </h1>
@@ -50,7 +50,7 @@ export default function Header() {
                         "nav gap-4 items-center flex max-md:flex-col max-md:border border-[#4f46e5fa] max-md:bg-[#e0e7fff0] max-md:bg-[#e0e7fff0] max-md:rounded-md max-md:fixed max-md:top-0 max-md:left-0 max-md:z-20 max-md:h-screen max-md:w-1/2 max-md:px-5 max-md:py-10 ",
                         open
                             ? "max-md:translate-x-0"
-                            : "max-md:-translate-x-full",
+                            : "max-md:-translate-x-[101%]",
                         "transition-transform duration-300 ease-in-out"
                     )}
                 >
