@@ -28,29 +28,27 @@ export default function Header() {
 
     return (
         <header className="header py-5">
-            <div className="w-full px-10 max-lg:px-5 max-md:px-20 h-20 mx-auto flex justify-between items-center">
+            <div className="w-full px-10 md:px-20 lg:px-5 h-20 mx-auto flex justify-between items-center">
                 <h1 className="font-semibold text-[#4f46e5] text-2xl">
                     <Link href="/">Mindmap Flow</Link>
                 </h1>
                 <span
                     className={clsx(
                         "overlay bg-[#d1d9e95a]  fixed top-0 left-0 w-full h-screen z-10",
-                        open ? "max-md:block" : "hidden"
+                        open ? "md:block" : "hidden"
                     )}
                     onClick={handleClick}
                 ></span>
                 <button
-                    className="max-md:block hidden border border-[#4f46e5] px-2 py-1 rounded active:bg-[#4f46e5] focus:outline-none focus:ring"
+                    className="md:block hidden border border-[#4f46e5] px-2 py-1 rounded active:bg-[#4f46e5] focus:outline-none focus:ring"
                     onClick={handleClick}
                 >
                     <i className="fa-solid fa-bars"></i>
                 </button>
                 <nav
                     className={clsx(
-                        "nav gap-4 items-center flex max-md:flex-col max-md:border border-[#4f46e5fa] max-md:bg-[#e0e7fff0] max-md:bg-[#e0e7fff0] max-md:rounded-md max-md:fixed max-md:top-0 max-md:left-0 max-md:z-20 max-md:h-screen max-md:w-1/2 max-md:px-5 max-md:py-10 ",
-                        open
-                            ? "max-md:translate-x-0"
-                            : "max-md:-translate-x-[101%]",
+                        "nav gap-4 items-center flex md:flex-col md:border border-[#4f46e5fa] md:bg-[#e0e7fff0] md:bg-[#e0e7fff0] md:rounded-md md:fixed md:top-0 md:left-0 md:z-20 md:h-screen md:w-1/2 md:px-5 md:py-10 ",
+                        open ? "md:translate-x-0" : "md:-translate-x-[101%]",
                         "transition-transform duration-300 ease-in-out"
                     )}
                 >

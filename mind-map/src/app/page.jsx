@@ -9,7 +9,7 @@ export const metadata = {
 export default function HomePage() {
     return (
         <section className=" bg-[#e0e7ff] py-10">
-            <div className="container mx-auto text-center">
+            <div className="mx-auto text-center">
                 <h2 className="text-3xl font-semibold mb-5 text-sky-500 [word-spacing:3px]">
                     Học tập hiệu quả với bản đồ tư duy
                 </h2>
@@ -25,11 +25,11 @@ export default function HomePage() {
                         alt="Mind map"
                     />
                 </div>
-                <div className="flex mt-20 max-sm:flex-col max-sm:gap-y-10 max-sm:items-center ">
+                <div className="flex mt-20 sm:flex-col sm:gap-y-10 sm:items-center ">
                     {dataHomePage.map((item, index) => (
                         <div
                             key={index}
-                            className=" relative item basis-1/3 px-3   after:content-[''] after:block after:absolute after:w-[80px] after:h-[1px] after:left-1/2 after:-top-1/4 after:-translate-x-1/2  after:bg-[#4f46e535] max-sm:w-8/12 max-sm:mx-auto "
+                            className=" relative item basis-1/3 px-3   after:content-[''] after:block after:absolute after:w-[80px] after:h-[1px] after:left-1/2 after:-top-1/4 after:-translate-x-1/2  after:bg-[#4f46e535] sm:w-8/12 sm:mx-auto "
                         >
                             <h3 className="text-xl font-medium  uppercase">
                                 {item.title}

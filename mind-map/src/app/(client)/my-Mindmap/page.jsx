@@ -9,7 +9,7 @@ export default async function MindMapPage() {
     const session = await getSession();
     return (
         <section className="py-10">
-            <div className="container mx-auto px-4">
+            <div className="mx-auto px-4">
                 <h2 className="text-2xl font-semibold mb-5 text-sky-500 [word-spacing:3px]">
                     Mind Map của tôi
                 </h2>

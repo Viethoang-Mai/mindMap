@@ -2,12 +2,12 @@ import { dataFooter } from "./dataFooter";
 import "./footer.css";
 export default function Footer() {
     return (
-        <footer className="bg-[#f3f4f6] py-14">
-            <div className="container mx-auto ">
-                <div className="footer-up flex w-full">
+        <footer className="bg-[#f3f4f6] py-14 px-5">
+            <div className=" mx-auto   ">
+                <div className="footer-up flex w-full md:flex-wrap md:gap-y-10 xs:justify-center  ">
                     {dataFooter.map((item, index) => (
                         <div
-                            className="item flex flex-col basis-1/6 px-4"
+                            className="item flex flex-col basis-1/6 xs:basis-1/2 md:basis-1/3  px-4"
                             key={index}
                         >
                             <h2 className="title text-xl font-semibold mb-4 text-nowrap">
@@ -24,7 +24,7 @@ export default function Footer() {
                             ))}
                         </div>
                     ))}
-                    <div className="stay-connect basis-1/6 px-4 mx-auto ">
+                    <div className="stay-connect basis-1/6 xs:basis-1/2 md:basis-1/3  px-4 mx-auto ">
                         <h2 className="title text-xl font-semibold text-nowrap mb-5">
                             Stay Connected
                         </h2>
@@ -50,7 +50,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="footer-down flex justify-between mt-14 pt-14 border-t border-gray-200">
+                <div className="footer-down flex justify-between mt-14 pt-14 border-t border-gray-200 flex-wrap sm:gap-y-10">
                     <div className="item flex px-4">
                         <h2 className="title text-md font-semibold">FWR</h2>
                     </div>
