@@ -2,8 +2,9 @@
 .nav-action {
     transition: background-color 0.2s linear;
     font-size: 1rem;
-    padding: 8px 16px;
+    padding: 8px 12px;
     border-radius: 5px;
+    font-size: 1rem;
 }
 .nav-action {
     color: #4f46e5;

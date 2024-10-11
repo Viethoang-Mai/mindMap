@@ -4,7 +4,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import { revalidateTag } from "next/cache";
 
 export default function DeleteButton({ id, userId }) {
     const [loading, setLoading] = useState(false);

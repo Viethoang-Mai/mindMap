@@ -27,6 +27,14 @@ module.exports = {
                     950: "#172554",
                 },
             },
+            screens: {
+                "max-xs": { max: "576.98px" }, // Max-width for screens smaller than 576px
+                "max-sm": { max: "639.98px" }, // Max-width for screens smaller than 640px
+                "max-md": { max: "767.98px" }, // Max-width for screens smaller than 768px
+                "max-lg": { max: "1023.98px" }, // Max-width for screens smaller than 1024px
+                "max-xl": { max: "1279.98px" }, // Max-width for screens smaller than 1280px
+                "max-xxl": { max: "1599.98px" }, // Max-width for screens smaller than 1599px
+            },
         },
     },
     plugins: [],

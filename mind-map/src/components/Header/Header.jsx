@@ -1,17 +1,22 @@
 "use client";
 import Link from "next/link";
 import style from "./header.module.css";
+import { useState } from "react";
 
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { useUser } from "@auth0/nextjs-auth0/client";
 export default function Header() {
     const { user, error, isLoading } = useUser();
+    const [open, setOpen] = useState(false);
     const pathname = usePathname();
     const active = (path) => {
         return pathname === path
             ? style["nav-link-active"]
             : "hover:bg-[#d1d9e96a]";
+    };
+    const handleClick = () => {
+        setOpen(!open);
     };
     if (isLoading) {
         return (
@@ -22,12 +27,33 @@ export default function Header() {
     }
 
     return (
-        <header className="header ">
-            <div className="container px-4 h-20 mx-auto flex justify-between items-center">
-                <h1 className="font-semibold text-primary text-2xl">
+        <header className="header py-5">
+            <div className=" w-full max-md:px-20 max-lg:px-5 px-10  h-20 mx-auto flex justify-between items-center">
+                <h1 className="font-semibold text-[#4f46e5] text-2xl">
                     <Link href="/">Mindmap Flow</Link>
                 </h1>
-                <nav className="nav flex gap-5 items-center">
+                <span
+                    className={clsx(
+                        "overlay bg-[#d1d9e95a]  fixed top-0 left-0 w-full h-screen z-10",
+                        open ? "max-md:block" : "hidden"
+                    )}
+                    onClick={handleClick}
+                ></span>
+                <button
+                    className="max-md:block hidden border border-[#4f46e5] px-2 py-1 rounded active:bg-[#4f46e5] focus:outline-none focus:ring"
+                    onClick={handleClick}
+                >
+                    <i className="fa-solid fa-bars"></i>
+                </button>
+                <nav
+                    className={clsx(
+                        "nav gap-4 items-center flex max-md:flex-col max-md:border border-[#4f46e5fa] max-md:bg-[#e0e7fff0] max-md:bg-[#e0e7fff0] max-md:rounded-md max-md:fixed max-md:top-0 max-md:left-0 max-md:z-20 max-md:h-screen max-md:w-1/2 max-md:px-5 max-md:py-10 ",
+                        open
+                            ? "max-md:translate-x-0"
+                            : "max-md:-translate-x-full",
+                        "transition-transform duration-300 ease-in-out"
+                    )}
+                >
                     <Link
                         href="/"
                         className={clsx(style["nav-link"], active("/"))}
