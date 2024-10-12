@@ -5,8 +5,8 @@ export const metadata = {
 export default function ContactPage() {
     return (
         <section className="">
-            <div className="container mx-auto px-4 py-16">
-                <div className="bg-white dark:bg-gray-900 lg:w-8/12 mx-auto sm:px-6 lg:px-8 ">
+            <div className="container mx-auto px-10 py-16 ">
+                <div className="bg-white dark:bg-gray-900 w-8/12 mx-auto lg:px-8 sm:w-full xs:px-0">
                     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
                             Contact Us
