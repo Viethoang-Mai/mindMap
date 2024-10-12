@@ -211,7 +211,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
 
     return (
         <section>
-            <div className="container mx-auto px-4 mt-10">
+            <div className=" mx-auto px-4 mt-10">
                 <div className="row mb-16 flex justify-between">
                     <div className="flex flex-col">
                         <input

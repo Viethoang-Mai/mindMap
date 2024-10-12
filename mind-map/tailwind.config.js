@@ -6,6 +6,14 @@ module.exports = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+        screens: {
+            xxl: { max: "1599.98px" }, // Max-width for screens smaller than 1599px
+            xl: { max: "1279.98px" }, // Max-width for screens smaller than 1280px
+            lg: { max: "1023.98px" }, // Max-width for screens smaller than 1024px
+            md: { max: "767.98px" }, // Max-width for screens smaller than 768px
+            sm: { max: "639.98px" }, // Max-width for screens smaller than 640px
+            xs: { max: "576.98px" }, // Max-width for screens smaller than 576px
+        },
         extend: {
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -26,14 +34,6 @@ module.exports = {
                     900: "#1e3a8a",
                     950: "#172554",
                 },
-            },
-            screens: {
-                xs: { max: "576.98px" }, // Max-width for screens smaller than 576px
-                sm: { max: "639.98px" }, // Max-width for screens smaller than 640px
-                md: { max: "767.98px" }, // Max-width for screens smaller than 768px
-                lg: { max: "1023.98px" }, // Max-width for screens smaller than 1024px
-                xl: { max: "1279.98px" }, // Max-width for screens smaller than 1280px
-                xxl: { max: "1599.98px" }, // Max-width for screens smaller than 1599px
             },
         },
     },

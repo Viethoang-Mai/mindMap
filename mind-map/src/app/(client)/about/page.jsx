@@ -12,9 +12,9 @@ import user4 from "../../../assets/images/avtUser4.png";
 export default function AboutPage() {
     return (
         <section className="">
-            <div className="container mx-auto px-10 py-10">
-                <div className="row-up flex gap-x-8   items-center">
-                    <div className="w-full lg:w-5/12">
+            <div className=" mx-auto px-10 py-10">
+                <div className="row-up flex gap-x-8 items-center sm:flex-col sm:gap-y-10 sm:w-full">
+                    <div className="w-full xl:w-5/12 sm:w-full">
                         <h1 className="text-[40px] font-bold mb-5">About Us</h1>
                         <p className="text-lg">
                             It is a long established fact that a reader will be
@@ -32,11 +32,11 @@ export default function AboutPage() {
                         src={AboutImage}
                         alt="Mind map"
                         width={668}
-                        className="w-full lg:w-8/12 h-auto block"
+                        className="w-full xl:w-8/12 lg:w-7/12 h-auto block sm:w-full"
                     />
                 </div>
-                <div className="row-down flex gap-x-8 mt-20 justify-between items-center ">
-                    <div className="w-full lg:w-5/12">
+                <div className="row-down flex gap-x-8 mt-20 justify-between items-center sm:flex-col sm:gap-y-10 ">
+                    <div className="w-full xl:w-5/12 sm:w-full">
                         <h2 className="text-[40px] font-bold mb-5">
                             Our Story
                         </h2>
@@ -52,11 +52,11 @@ export default function AboutPage() {
                             which is apparent from
                         </p>
                     </div>
-                    <div className="w-full flex lg:w-8/12 grid grid-cols-4 gap-4 shadow-lg rounded-md pb-5 px-5">
+                    <div className="w-full  xl:w-8/12 grid grid-cols-4 md:grid-cols-2 gap-4 shadow-lg rounded-md pb-5 px-5 sm:w-full sm:justify-items-center ">
                         <Image
                             src={user1}
                             alt="Mind map"
-                            className="w-auto h-auto "
+                            className="w-auto h-auto  "
                         />
                         <Image
                             src={user2}

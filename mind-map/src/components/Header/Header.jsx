@@ -20,7 +20,7 @@ export default function Header() {
     };
     if (isLoading) {
         return (
-            <div className="flex flex-col items-center justify-center h-screen">
+            <div className="flex flex-col items-center justify-center h-screen fixed top-0 left-0 right-0 bottom-0 bg-white z-50">
                 <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
             </div>
         );
@@ -28,7 +28,7 @@ export default function Header() {
 
     return (
         <header className="header py-5">
-            <div className="w-full px-10 md:px-20 lg:px-5 h-20 mx-auto flex justify-between items-center">
+            <div className="w-full  lg:px-5 md:px-20 sm:px-10 px-10 h-20 mx-auto flex justify-between items-center">
                 <h1 className="font-semibold text-[#4f46e5] text-2xl">
                     <Link href="/">Mindmap Flow</Link>
                 </h1>
@@ -40,14 +40,14 @@ export default function Header() {
                     onClick={handleClick}
                 ></span>
                 <button
-                    className="md:block hidden border border-[#4f46e5] px-2 py-1 rounded active:bg-[#4f46e5] focus:outline-none focus:ring"
+                    className="hidden border border-[#4f46e5] px-2 py-1 rounded active:bg-[#4f46e5] focus:outline-none focus:ring md:block "
                     onClick={handleClick}
                 >
                     <i className="fa-solid fa-bars"></i>
                 </button>
                 <nav
                     className={clsx(
-                        "nav gap-4 items-center flex md:flex-col md:border border-[#4f46e5fa] md:bg-[#e0e7fff0] md:bg-[#e0e7fff0] md:rounded-md md:fixed md:top-0 md:left-0 md:z-20 md:h-screen md:w-1/2 md:px-5 md:py-10 ",
+                        "nav gap-4 items-center flex md:flex-col md:border border-r-[#4f46e5fa] md:bg-[#e0e7fff0] md:bg-[#e0e7fff0] md:rounded-md md:fixed md:top-0 md:left-0 md:z-20 md:h-screen md:w-1/3 md:px-5 md:py-10 ",
                         open ? "md:translate-x-0" : "md:-translate-x-[101%]",
                         "transition-transform duration-300 ease-in-out"
                     )}
