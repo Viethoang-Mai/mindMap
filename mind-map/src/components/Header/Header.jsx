@@ -47,7 +47,7 @@ export default function Header() {
                 </button>
                 <nav
                     className={clsx(
-                        "nav gap-4 items-center flex md:flex-col md:border border-r-[#4f46e5fa] md:bg-[#e0e7fff0] md:bg-[#e0e7fff0] md:rounded-md md:fixed md:top-0 md:left-0 md:z-20 md:h-screen md:w-1/3 md:px-5 md:py-10 sm:w-1/2 w-full",
+                        "nav gap-4 items-center flex md:flex-col md:border border-r-[#4f46e5fa] md:bg-[#e0e7fff0] md:bg-[#e0e7fff0] md:rounded-md md:fixed md:top-0 md:left-0 md:z-20 md:h-screen md:w-1/3 md:px-5 md:py-10 sm:w-1/2 ",
                         open ? "md:translate-x-0" : "md:-translate-x-[101%]",
                         "transition-transform duration-300 ease-in-out"
                     )}
