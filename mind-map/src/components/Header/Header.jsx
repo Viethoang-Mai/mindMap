@@ -28,7 +28,7 @@ export default function Header() {
 
     return (
         <header className="header py-5">
-            <div className="w-full  lg:px-5 md:px-20 sm:px-10 px-10 h-20 mx-auto flex justify-between items-center">
+            <div className="w-full lg:px-5 md:px-20 sm:px-10 px-10 h-20 mx-auto flex justify-between items-center">
                 <h1 className="font-semibold text-[#4f46e5] text-2xl">
                     <Link href="/">Mindmap Flow</Link>
                 </h1>
@@ -47,7 +47,7 @@ export default function Header() {
                 </button>
                 <nav
                     className={clsx(
-                        "nav gap-4 items-center flex md:flex-col md:border border-r-[#4f46e5fa] md:bg-[#e0e7fff0] md:bg-[#e0e7fff0] md:rounded-md md:fixed md:top-0 md:left-0 md:z-20 md:h-screen md:w-1/3 md:px-5 md:py-10 ",
+                        "nav gap-4 items-center flex md:flex-col md:border border-r-[#4f46e5fa] md:bg-[#e0e7fff0] md:bg-[#e0e7fff0] md:rounded-md md:fixed md:top-0 md:left-0 md:z-20 md:h-screen md:w-1/3 md:px-5 md:py-10 sm:w-1/2 w-full",
                         open ? "md:translate-x-0" : "md:-translate-x-[101%]",
                         "transition-transform duration-300 ease-in-out"
                     )}

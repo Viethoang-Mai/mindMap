@@ -5,8 +5,8 @@ export const metadata = {
 export default function FeaturePage() {
     return (
         <section className="">
-            <div className="container mx-auto px-4 py-10">
-                <div className="text-center md:w-10/12 xl:w-8/12 mx-auto my-10">
+            <div className="container mx-auto px-10 py-10">
+                <div className="text-center w-8/12 md:w-10/12 xs:w-full  mx-auto my-10">
                     <h1 className="text-[50px]  ">Feature</h1>
                     <p className=" text-2xl font-medium my-5 my-5 text-gray-600">
                         The main aim of creating FWR blocks is to help
@@ -19,8 +19,8 @@ export default function FeaturePage() {
                         Learn More
                     </button>
                 </div>
-                <div className="list-feature ">
-                    <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="list-feature  ">
+                    <ul className="grid grid-cols-3 md:grid-cols-1 gap-10">
                         <li className="feature-item border-2 border-gray-200 px-6 py-10 text-center">
                             <i className="fa-solid text-violet-500 fa-pen-ruler"></i>
                             <h2 className="text-2xl font-medium my-5 ">
