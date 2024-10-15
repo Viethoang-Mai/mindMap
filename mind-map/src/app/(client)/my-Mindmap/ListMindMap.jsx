@@ -14,7 +14,7 @@ export default async function ListMindMap({ userId }) {
 
     return (
         <div className="list-MindMap">
-            <table className="w-full text-center border-separate border-spacing-2">
+            <table className=" px-10 w-full text-center border-separate border-spacing-2">
                 <thead>
                     <tr>
                         <th width="30%">Tên</th>

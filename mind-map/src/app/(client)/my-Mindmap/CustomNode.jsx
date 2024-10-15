@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import { Handle, Position, useReactFlow } from "@xyflow/react";
+import clsx from "clsx";
 
 function TextUpdaterNode(data) {
     const { setNodes } = useReactFlow();
@@ -33,7 +34,10 @@ function TextUpdaterNode(data) {
                     onDoubleClick={() => setEdit(true)}
                     onBlur={() => setEdit(false)}
                     onKeyUp={(e) => e.key === "Enter" && setEdit(false)}
-                    className=" text-center border border-gray-300 rounded-lg p-2 inline-block "
+                    className={clsx(
+                        " text-center border  rounded-lg p-2 inline-block",
+                        edit && " outline-blue-500 "
+                    )}
                 />
             </div>
             <Handle type="source" position={Position.Bottom} id="a" />

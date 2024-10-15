@@ -1,12 +1,5 @@
 "use client";
-import React, {
-    memo,
-    useCallback,
-    useEffect,
-    useState,
-    useRef,
-    useLayoutEffect,
-} from "react";
+import React, { memo, useCallback, useEffect, useState, useRef } from "react";
 import {
     ReactFlow,
     MiniMap,
@@ -23,7 +16,6 @@ import { useRouter } from "next/navigation";
 import "@xyflow/react/dist/style.css";
 import TextUpdaterNode from "../CustomNode";
 import { toast } from "react-toastify";
-import { revalidateTag } from "next/cache";
 const initialEdges = [];
 const nodeTypes = { textUpdater: TextUpdaterNode };
 
@@ -83,7 +75,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
                 throw new Error(res.statusText);
             }
             toast.success("Lưu thành công");
-            revalidateTag("mindMapData");
+            router.refresh();
             return await updateRes.json();
         } catch (err) {}
     }, [mapData, edges, nodes, title, description, mode, dataJson]);
